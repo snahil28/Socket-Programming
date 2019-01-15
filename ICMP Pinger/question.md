@@ -10,16 +10,14 @@ Your task is to develop your own Ping application in Python. Your application wi
 order to keep it simple, will not exactly follow the official specification in RFC 1739. Note that you will
 only need to write the client side of the program, as the functionality needed on the server side is built
 into almost all operating systems.
+
 You should complete the Ping application so that it sends ping requests to a specified host separated by
 approximately one second. Each message contains a payload of data that includes a timestamp. After
 sending each packet, the application waits up to one second to receive a reply. If one second goes by
 without a reply from the server, then the client assumes that either the ping packet or the pong packet
 was lost in the network (or that the server is down).
-Code
-Below you will find the skeleton code for the client. You are to complete the skeleton code. The places
-where you need to fill in code are marked with #Fill in start and #Fill in end. Each place may require
-one or more lines of code.
-Additional Notes
+
+## Additional Notes
 1. In “receiveOnePing” method, you need to receive the structure ICMP_ECHO_REPLY and fetch
 the information you need, such as checksum, sequence number, time to live (TTL), etc. Study the
 “sendOnePing” method before trying to complete the “receiveOnePing” method.
